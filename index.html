@@ -5,58 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Inicio - Aplicación Educativa</title>
   <link rel="stylesheet" href="css/estilos.css">
-  <style>
-    body {
-      margin: 0;
-      font-family: sans-serif;
-      background: linear-gradient(to bottom right, #f0f8ff, #d0e8ff);
-    }
-    .pantalla-inicio {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-      text-align: center;
-      padding: 20px;
-    }
-    h1 {
-      font-size: 3em;
-      margin-bottom: 0.5em;
-    }
-    .instruccion {
-      font-size: 1.5em;
-      margin-bottom: 1em;
-    }
-    .lista-estudiantes {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 15px;
-      justify-content: center;
-      max-width: 800px;
-    }
-    .btn-estudiante {
-      background-color: #007bff;
-      color: white;
-      border: none;
-      padding: 15px 30px;
-      font-size: 1.2em;
-      border-radius: 15px;
-      cursor: pointer;
-      transition: background-color 0.3s;
-    }
-    .btn-estudiante:hover {
-      background-color: #0056b3;
-    }
-    footer {
-      position: absolute;
-      bottom: 10px;
-      width: 100%;
-      text-align: center;
-      font-size: 0.9em;
-      color: #333;
-    }
-  </style>
+ 
 </head>
 <body>
   <div class="pantalla-inicio">
@@ -70,20 +19,7 @@
     </footer>
   </div>
 
-  <script>
-    const estudiantes = ["Juan", "María", "Luis", "Ana"];
+<script src="js/inicio.js"></script>
 
-    const contenedor = document.getElementById("listaEstudiantes");
-    estudiantes.forEach(nombre => {
-      const boton = document.createElement("button");
-      boton.className = "btn-estudiante";
-      boton.textContent = nombre;
-      boton.onclick = () => {
-        alert(`Bienvenido ${nombre}! (Aquí se cargaría su perfil)`);
-        // Redireccionar a pantalla de módulos o cargar su JSON aquí
-      };
-      contenedor.appendChild(boton);
-    });
-  </script>
-</body>
+ </body>
 </html>
