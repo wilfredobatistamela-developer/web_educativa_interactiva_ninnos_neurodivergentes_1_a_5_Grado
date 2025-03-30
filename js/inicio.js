@@ -17,7 +17,9 @@ estudiantes.forEach(nombre => {
         console.log("✅ Perfil cargado:", datos);
 
         // Aquí luego puedes redirigir o mostrar el menú de áreas habilitadas
-        alert(`Bienvenido ${datos.nombre}.\nÁreas habilitadas: ${datos.areas_habilitadas.join(", ")}`);
+      
+        //alert(`Bienvenido ${datos.nombre}.\nÁreas habilitadas: ${datos.areas_habilitadas.join(", ")}`);
+        window.location.href = `menu.html?nombre=${nombre}`;
       })
       .catch(error => {
         console.error("❌ Error al cargar perfil:", error);
