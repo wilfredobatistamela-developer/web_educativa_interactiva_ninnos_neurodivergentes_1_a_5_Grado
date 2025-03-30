@@ -29,8 +29,13 @@ fetch(archivo)
       btn.className = "btn-estudiante";
       btn.textContent = iconos[area] || area;
       btn.onclick = () => {
-        alert(`Entrando al módulo: ${area}`);
+        //alert(`Entrando al módulo: ${area}`);
         // Aquí más adelante: redirigir a raton.html, lectura.html, etc.
+        if (area === "raton") {
+          window.location.href = "raton.html";
+        } else {
+          alert(`Módulo "${area}" aún no está disponible`);
+        }
       };
       menu.appendChild(btn);
     });

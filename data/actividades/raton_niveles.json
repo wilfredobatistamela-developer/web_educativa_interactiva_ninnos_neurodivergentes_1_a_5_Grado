@@ -1,0 +1,50 @@
+[
+  {
+    "nivel": 1,
+    "instruccion": "Haz clic en la estrella",
+    "imagenes": [
+      {
+        "id": "estrella",
+        "archivo": "estrella.png",
+        "correcta": true
+      }
+    ]
+  },
+  {
+    "nivel": 2,
+    "instruccion": "Haz clic en la estrella más grande",
+    "imagenes": [
+      {
+        "id": "estrella1",
+        "archivo": "estrella.png",
+        "correcta": false
+      },
+      {
+        "id": "estrella2",
+        "archivo": "estrella_grande.png",
+        "correcta": true
+      }
+    ]
+  },
+  {
+    "nivel": 3,
+    "instruccion": "Haz clic en el gato",
+    "imagenes": [
+      {
+        "id": "estrella",
+        "archivo": "estrella.png",
+        "correcta": false
+      },
+      {
+        "id": "gato",
+        "archivo": "gato.png",
+        "correcta": true
+      },
+      {
+        "id": "perro",
+        "archivo": "perro.png",
+        "correcta": false
+      }
+    ]
+  }
+]
