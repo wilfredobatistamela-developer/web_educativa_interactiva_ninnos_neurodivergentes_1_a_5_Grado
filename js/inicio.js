@@ -1,6 +1,4 @@
-// Lista temporal de estudiantes
 const estudiantes = ["Juan", "María", "Luis", "Ana"];
-
 const contenedor = document.getElementById("listaEstudiantes");
 
 estudiantes.forEach(nombre => {
@@ -8,8 +6,23 @@ estudiantes.forEach(nombre => {
   boton.className = "btn-estudiante";
   boton.textContent = nombre;
   boton.onclick = () => {
-    alert(`Bienvenido ${nombre}! (Aquí se cargaría su perfil)`);
-    // TODO: Cargar archivo JSON desde data/estudiantes/nombre.json
+    const archivo = `data/estudiantes/${nombre.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "")}.json`;
+
+    fetch(archivo)
+      .then(res => {
+        if (!res.ok) throw new Error("Archivo no encontrado");
+        return res.json();
+      })
+      .then(datos => {
+        console.log("✅ Perfil cargado:", datos);
+
+        // Aquí luego puedes redirigir o mostrar el menú de áreas habilitadas
+        alert(`Bienvenido ${datos.nombre}.\nÁreas habilitadas: ${datos.areas_habilitadas.join(", ")}`);
+      })
+      .catch(error => {
+        console.error("❌ Error al cargar perfil:", error);
+        alert("No se pudo cargar el perfil del estudiante.");
+      });
   };
   contenedor.appendChild(boton);
 });

@@ -1,0 +1,14 @@
+{
+    "nombre": "Juan",
+    "areas_habilitadas": ["raton", "lectoescritura"],
+    "progreso": {
+      "raton": {
+        "completadas": 3,
+        "puntaje": 30
+      }, "lectoescritura":{
+        "nivel_actual": "vocales", 
+        "puntaje": 45
+      }
+    }
+  }
+  
